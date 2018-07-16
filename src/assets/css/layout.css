@@ -1,0 +1,112 @@
+:root {
+  --background: #F3F3F3;
+  --background-light: #F3F3F3;
+  --border-light: rgba(0,0,0,0.100);
+  --primary: rgb(95, 197, 192);
+  --primary-dark: #21BBB4;
+  --secondary: #fa1954;
+  --secondary-dark: #ED0C47;
+  --nav-height: 70px;
+  --nav-left-width: 260px;
+  --highlight: rgba(46, 200, 193, 0.11);
+}
+#app {
+  background: var(--background);
+}
+body > * {
+  touch-action: pan-x pan-y !important;
+}
+/* Layout */
+html, body { width: initial;height: 100%; }
+html, body, main { min-width: 320px;min-height: 320px;height: 100%; }
+body, main, .page { min-height: fit-content;}
+.page { max-height: fit-content;}
+.page, .page > .grid-box, .page > section { display: flex;flex: 1;flex-direction: column; }
+[block] {background: white;}
+button {
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  min-width: 120px;
+  font-size:90;
+  font-weight: 600;
+  padding:10px;
+  margin: 5px;
+  text-transform: uppercase;
+}
+button.action {
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 6px;
+  background: #b3b3b3;
+}
+button.flat {
+  color: rgba(0, 0, 0, 0.7);
+}
+button.flat:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+button.action:hover {
+  background:  #999999;
+}
+button.action:active {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 14px;
+}
+button.primary {
+  background: var(--primary);
+  color: #fff;
+}
+button.primary:hover {
+  background: var(--primary-dark);
+}
+button.secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+button.secondary:hover {
+  background: var(--secondary-dark);
+}
+button.inactive {
+  box-shadow: none;
+  background: inherit;
+  color: rgba(0, 0, 0, 0.26);
+}
+button.inactive:hover {
+  box-shadow: none;
+  background: inherit;
+  cursor: default;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+.title {
+  font-weight: 600;
+  font-size: 110%;
+  margin-bottom:10px;
+}
+.info {
+  padding: 4px;
+}
+.info .svg-icon {
+  margin: auto 0;
+  width:18px;
+  height:18px;
+}
+.info .text {
+  padding-left: 15px;
+}
+h1 { margin-bottom: var(--spacing); }
+input, textarea, select {
+  width: 300px;
+  background: rgba(155, 155, 155, 0.11);
+  min-height: 36px;
+  padding: 5px;
+}
+input::placeholder, textarea::placeholder {
+  color: rgba(0,0,0,0.7);
+}
+input:focus, textarea:focus {
+  box-shadow: 0 1px 9px 0 rgba(94, 119, 255, 0.2);
+  background-color: var(--highlight);
+  border: solid 2px var(--primary);
+}
